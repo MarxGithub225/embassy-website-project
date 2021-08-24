@@ -1,0 +1,224 @@
+.topBar {
+    height: 130px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../../../assets/topBg.png');
+
+    padding: 15px 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .brand {
+        width: 50%;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .logo {
+            font-size: 55px;
+            color: #005fb2;
+            margin-right: 10px;
+            font-weight: bold;
+
+            img {
+                width: 250px;
+                height: auto;
+            }
+        }
+
+        .separator {
+            height: 45px;
+            width: 2px;
+            background-color: black;
+        }
+        .note {
+            font-size: 23px;
+            margin-left: 10px;
+            color: #005fb2;
+            line-height: 25px;
+        }
+    }
+
+    .rightSide {
+        .socials {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .s-i {
+                margin-right: 8px;
+                
+                i {font-size: 22px;}
+            }
+
+            .fbk {
+                i {color: #005fb2;}
+            }
+            .ytb {
+                i {color: #2867B2;}
+            }
+            .inst {
+                i {color: #3d107b;}
+            }
+        }
+
+        .account {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .item {
+                border-right: 1px solid #000;
+                padding: 0 10px;
+                color: #005fb2;
+                font-size: 19px;
+                &:last-child {border: 0 !important; }
+            }
+        }
+
+        .search {
+            margin-top: 10px;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .search-btn {
+                margin-left: -28px;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background-color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            
+        }
+
+        
+    }
+}
+
+
+@media all and  (max-width: 768px) {
+    .topBar {
+        height: 130px;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('../../../assets/topBg.png');
+    
+        padding: 15px;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        .brand {
+            width: 80%;
+    
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+    
+            .logo {
+                font-size: 55px;
+                color: #005fb2;
+                margin-right: 10px;
+                font-weight: bold;
+    
+                img {
+                    width: 100px;
+                    height: auto;
+                }
+            }
+    
+            .separator {
+                height: 45px;
+                width: 2px;
+                background-color: black;
+            }
+            .note {
+                font-size: 16px;
+                margin-left: 10px;
+                color: #005fb2;
+                line-height: 25px;
+            }
+
+            
+        }
+    
+        .rightSide {
+            .socials {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                .s-i {
+                    margin-right: 8px;
+                    
+                    i {font-size: 22px;}
+                }
+    
+                .fbk {
+                    i {color: #005fb2;}
+                }
+                .ytb {
+                    i {color: #2867B2;}
+                }
+                .inst {
+                    i {color: #3d107b;}
+                }
+            }
+    
+            .account {
+                margin-top: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                .item {
+                    border-right: 1px solid #000;
+                    padding: 0 10px;
+                    color: #005fb2;
+                    font-size: 19px;
+                    &:last-child {border: 0 !important; }
+                }
+            }
+    
+            .search {
+                margin-top: 10px;
+    
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                .search-btn {
+                    margin-left: -28px;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+    
+                
+            }
+    
+            
+        }
+    }
+
+    .navbar .nav-item {
+        margin-top: 15px !important;
+    }
+}

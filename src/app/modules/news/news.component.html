@@ -1,0 +1,41 @@
+<app-topbar></app-topbar>
+<app-header2></app-header2>
+
+<section id="details">
+
+    <div class="b-title">
+        Actualités
+    </div>
+    <div class="news">
+        <div class="newItem" *ngFor = "let new of thenews">
+                
+            <div class="content">
+                <div class="pic"
+            
+            [style.background-image]=" 'url(' + baseUrl + new.image + ')' "
+            >
+                <a [routerLink] = " '/news/' + new.id ">
+                    <div class="vid">
+                        <i class="far fa-play-circle" *ngIf = "new.type === '0'"></i>
+                    </div>
+                </a>
+            </div>
+    
+            <div class="info">
+                <a [routerLink] = " '/news/' + new.id ">
+                    <div class="title">
+                        {{new.title}}
+                    </div>
+    
+                    <div class="description" [innerHTML] = "new.description">
+                        
+                    </div>
+                </a>
+            </div>
+            </div>
+        
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>

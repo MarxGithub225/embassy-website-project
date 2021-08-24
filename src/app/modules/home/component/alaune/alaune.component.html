@@ -1,0 +1,70 @@
+<!-- About section-->
+<section id="about">
+    <div class="title">
+        <div class="caret"></div>
+
+        <div class="label"> à LA UNE</div>
+    </div>
+
+    <div class="content">
+
+        <div class="leftSide">
+            <a [routerLink] = " 'news/' + une.id ">
+
+                <div class="alaUne"
+                [style.background-image]=" 'url(' + baseUrl + une.image + ')' "
+                >
+                    
+                    <div class="content">
+                        <div class="vid" >
+                            <i class="far fa-play-circle" *ngIf = "une.type === '0'"></i>
+                        </div>
+                        <div class="u-title">
+                            {{une.title}}
+                        </div>
+                    </div>
+                </div>
+
+
+            </a>
+        </div>
+
+        <div class="rightSide">
+            <div class="newItem" *ngFor = "let new of moduleState.news | slice:1:4">
+                
+                    <div class="pic"
+                    
+                    [style.background-image]=" 'url(' + baseUrl + new.image + ')' "
+                    >
+                        <a [routerLink] = " 'news/' + new.id ">
+                            <div class="vid">
+                                <i class="far fa-play-circle" *ngIf = "new.type === '0'"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="info">
+                        <a [routerLink] = " 'news/' + new.id ">
+                            <div class="title">
+                                {{new.title}}
+                            </div>
+
+                            <div class="description" [innerHTML] = "new.description">
+                                
+                            </div>
+                        </a>
+                    </div>
+                
+            </div>
+
+
+            
+
+            
+
+            <div class="seeMore" *ngIf = "moduleState.news.length > 3">
+                <a href=""><i class="fas fa-angle-double-right"></i> Voir plus</a>
+            </div>
+        </div>
+    </div>
+</section>

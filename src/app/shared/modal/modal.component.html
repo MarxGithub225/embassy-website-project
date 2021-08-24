@@ -1,0 +1,63 @@
+<div class="modalTitle">
+    {{modalTitle}}
+</div>
+
+<div class="details">
+    <ul>
+        <li>Pays : <span>{{modalDatas.country}}</span></li>
+        <li>Ambassade : <span>{{modalDatas.name}}</span></li>
+        <li>Téléphone : <span>{{modalDatas.phone1}}</span></li>
+        <li>Fax : <span *ngIf = "modalDatas.phone2">{{modalDatas.phone2}}</span> <span *ngIf = "!modalDatas.phone2">---</span> </li>
+        <li>E-mail : <span>{{modalDatas.email}}</span></li>
+
+        <li>  Localisation :  <span *ngIf = "modalDatas.map"> <a [href]="modalDatas.map"> modalDatas.map </a> </span>
+            <span *ngIf = "!modalDatas.map"> --- </span>
+        </li>
+        <li>Site web : <span *ngIf = "modalDatas.website"><a [href]="modalDatas.website"><i class="fas fa-globe"></i></a></span>
+            <span *ngIf = "!modalDatas.website"> --- </span>
+        </li>
+        <li>Heure d'ouverture :  <span *ngIf = "modalDatas.openingtime">  {{modalDatas.openingtime}}  </span>
+            <span *ngIf = "!modalDatas.openingtime"> --- </span>
+        </li>
+        <li>  Dévise : <span *ngIf = "modalDatas.devise">  {{modalDatas.devise}}  </span>
+            <span *ngIf = "!modalDatas.devise"> --- </span>
+        </li>
+        <li> Président : <span *ngIf = "modalDatas.presidentname">  {{modalDatas.presidentname}}  </span>
+            <span *ngIf = "!modalDatas.presidentname"> --- </span>
+        </li>
+        <li>Langues : <span *ngIf = "modalDatas.languages">  {{modalDatas.languages}}  </span>
+            <span *ngIf = "!modalDatas.languages"> --- </span>
+        
+        </li>
+        <li>Monnaie : <span *ngIf = "modalDatas.money">  {{modalDatas.money}}  </span>
+            <span *ngIf = "!modalDatas.money"> --- </span>
+        
+        </li>
+        <li>Population : <span *ngIf = "modalDatas.poeplenumber">  {{modalDatas.poeplenumber}}  </span>
+            <span *ngIf = "!modalDatas.poeplenumber"> --- </span>
+        
+        </li>
+        <li>Capital  : <span *ngIf = "modalDatas.capital">  {{modalDatas.capital}}  </span>
+            <span *ngIf = "!modalDatas.capital"> --- </span>
+        
+        </li>
+        <li>Plus grande ville  : <span *ngIf = "modalDatas.mostbigcity">  {{modalDatas.mostbigcity}}  </span>
+            <span *ngIf = "!modalDatas.mostbigcity"> --- </span>
+        
+        </li>
+        <li>Indicatif  : <span *ngIf = "modalDatas.code">  {{modalDatas.code}}  </span>
+            <span *ngIf = "!modalDatas.code"> --- </span>
+        
+        </li>
+        <li>Date d'arrivée  : <span *ngIf = "modalDatas.arrivingdate">  {{modalDatas.arrivingdate}}  </span>
+            <span *ngIf = "!modalDatas.arrivingdate"> --- </span>
+        
+        </li>
+        <li>Durrée moyenne d'obtention du visa  : <span *ngIf = "modalDatas.averagetime">  {{modalDatas.averagetime}}  </span>
+            <span *ngIf = "!modalDatas.averagetime"> --- </span>
+        
+        </li>
+        
+    </ul>
+
+</div>

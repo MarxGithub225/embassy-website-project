@@ -1,0 +1,189 @@
+#details {
+
+    height: -webkit-fill-available;
+
+    .b-title {
+        font-size: 30px;
+        color: #005fb3;
+        letter-spacing: 1.5px;
+        font-weight: 10;
+        margin-left: 15px;
+        text-transform: uppercase;
+        margin-top: 10px;
+        
+    }
+
+    .news {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+
+     .newItem {
+        cursor: pointer;
+        width: calc(100% / 4);
+        height: 120px;
+        padding: 10px;
+
+        .content {
+
+            
+        background-color: #f8f8f8;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+            .pic {
+                height: 100%;
+                width: 45%;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+    
+                .vid {
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+                    overflow: hidden;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+    
+                    background-color: rgba($color: #000000, $alpha: .2);
+                    i{font-size: 30px; color: #fff; opacity: .5; cursor: pointer;}
+                }
+            }
+    
+    
+            .info {
+                width: 55%;
+                padding: 5px;
+    
+                .title {
+                    width: 100%;
+                    font-weight: bold;
+                    font-size: 14px;
+                    color: #00a9ec;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical; 
+                    overflow: hidden;
+                    margin-bottom: 20px;
+                }
+    
+                .description {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical; 
+                    font-size: 13px;
+                    overflow: hidden;
+    
+                }
+            }
+
+        }
+        
+    }
+    }
+     
+
+    
+}
+
+@media all and  (max-width: 768px) {
+    #details {
+
+        height: -webkit-fill-available;
+    
+        .b-title {
+            font-size: 30px;
+            color: #005fb3;
+            letter-spacing: 1.5px;
+            font-weight: 10;
+            margin-left: 15px;
+            text-transform: uppercase;
+            margin-top: 10px;
+            
+        }
+    
+        .news {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+    
+         .newItem {
+            cursor: pointer;
+            width: 100% !important;
+            height: 120px;
+            padding: 10px;
+    
+            .content {
+    
+                
+            background-color: #f8f8f8;
+    
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+                .pic {
+                    height: 100%;
+                    width: 45%;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+        
+                    .vid {
+                        position: relative;
+                        height: 100%;
+                        width: 100%;
+                        overflow: hidden;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+        
+                        background-color: rgba($color: #000000, $alpha: .2);
+                        i{font-size: 30px; color: #fff; opacity: .5; cursor: pointer;}
+                    }
+                }
+        
+        
+                .info {
+                    width: 55%;
+                    padding: 5px;
+        
+                    .title {
+                        width: 100%;
+                        font-weight: bold;
+                        font-size: 14px;
+                        color: #00a9ec;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical; 
+                        overflow: hidden;
+                        margin-bottom: 20px;
+                    }
+        
+                    .description {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical; 
+                        font-size: 13px;
+                        overflow: hidden;
+        
+                    }
+                }
+    
+            }
+            
+        }
+        }
+         
+    
+        
+    }
+}

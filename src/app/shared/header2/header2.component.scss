@@ -1,0 +1,13 @@
+.navbar {
+    padding: 0 !important;
+
+    .nav-item {
+        margin-right: 25px;
+        &:last-child {margin-right: 0 !important;}
+    }
+}
+
+.navbar-dark .navbar-nav .nav-active {
+    background-color: #00a9ec !important;
+    color: #fff;
+}

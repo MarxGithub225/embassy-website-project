@@ -1,0 +1,67 @@
+<!-- About section-->
+<section id="discovery">
+    <div class="title">
+        <div class="caret"></div>
+
+        <div class="label"> à la découverte</div>
+    </div>
+
+    <div class="content">
+
+        <div class="leftSide">
+            <mat-carousel
+            timings="250ms ease-in"
+            [autoplay]="true"
+            interval="5000"
+            color="accent"
+            maxWidth="auto"
+            proportion="50"
+            slides="100"
+            [loop]="true"
+            [hideArrows]="false"
+            [hideIndicators]="false"
+            [useKeyboard]="true"
+            [useMouseWheel]="false"  
+            orientation="ltr" 
+            >
+            <mat-carousel-slide
+                #matCarouselSlide
+                *ngFor="let slide of decouvertes; let i = index"
+                overlayColor=""
+                [hideOverlay]="false"
+            >
+            <div class="alaUne"
+            [style.background-image]=" 'url(' + baseUrl + slide.image + ')' "
+            >
+                
+                <div class="content">
+                    <div class="vid">
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                    <div class="u-title">
+                        <h3>{{slide.title}}</h3>
+                        <p [innerHTML] = "slide.description">
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </mat-carousel-slide>
+            
+            </mat-carousel>
+            
+        </div>
+
+        <div class="rightSide">
+            <div class="header">
+        
+                <div class="text">
+                    <em>Suivez-nous sur:</em>
+                </div>
+            </div>
+
+            <div class="newItem">
+                
+            </div>
+        </div>
+    </div>
+</section>

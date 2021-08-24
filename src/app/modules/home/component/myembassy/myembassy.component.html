@@ -1,0 +1,78 @@
+<!-- Services section-->
+<section id="services">
+    <div class="title">
+        <div class="caret"></div>
+
+        <div class="label"> MON AMBASSADE</div>
+    </div>
+
+    <div class="content">
+
+        <div class="leftSide">
+            <div class="subTitle">
+                <div class="big-t">
+                    <em>Embassy News</em>
+                </div>
+                <div class="note">
+                    <em>
+                        Est une plateforme réunissant toutes les ambassades sur le territoir ivoirien, afin de diffuser leurs différentes activités et faire la promotion des pays dont nous avons les relations diplomatiques.
+                    </em>
+                </div>
+            </div>
+
+            <div class="search">
+                <input type="search" name="search" [(ngModel)]="searchText" placeholder="Rechercher" class="form-control">
+            </div>
+            <div class="countries">
+                <div class="cItem" 
+                *ngFor = "let c of moduleState.embassies | filter:searchText ; let i = index"
+                [class.active] = "selected === i"
+                >
+                    <img [src]="baseUrl + c.logo" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="rightSide">
+
+            <div class="header">
+                <div class="icon">
+                    <em>!</em>
+                </div>
+        
+                <div class="text">
+                    <em>Informations sur votre AMBASSADE</em>
+                </div>
+            </div>
+
+            <div class="countryDetails">
+                <div class="pic"
+                [style.background-image]="'url(' + baseUrl + countryDetails.logo +')'"
+                >
+
+                </div>
+
+                <div class="details">
+                    <ul>
+                        <li>Pays : <span>{{countryDetails.country}}</span></li>
+                        <li>Ambassade : <span>{{countryDetails.name}}</span></li>
+                        <li>  Localisation :  <span *ngIf = "countryDetails.map"> <a [href]="countryDetails.map"> countryDetails.map </a> </span>
+                            <span *ngIf = "!countryDetails.map"> --- </span>
+                        </li>
+
+                        <li>Téléphone : <span>{{countryDetails.phone1}}</span></li>
+                        <li>Fax : <span *ngIf = "countryDetails.phone2">{{countryDetails.phone2}}</span> <span *ngIf = "!countryDetails.phone2">---</span> </li>
+                        <li>E-mail : <span>{{countryDetails.email}}</span></li>
+
+
+                    </ul>
+
+                    <button mat-flat-button color = "primary" type="button"
+                    
+                    (click) = " openModal ('500', 'px', 'createNew', 'Détails de l\'ambassade', countryDetails) "
+                    >Plus de détails</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

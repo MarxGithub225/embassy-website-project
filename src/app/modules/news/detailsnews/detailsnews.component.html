@@ -1,0 +1,114 @@
+<app-topbar></app-topbar>
+<app-header2></app-header2>
+
+<section id="details">
+    <div class="details">
+
+        <div class="leftSide">
+            <div class="Pic"
+                [style.background-image]=" 'url(' + baseUrl + details.image + ')' "
+                >
+                    
+            </div>
+    
+            <div class="title">
+                {{details.title}}
+            </div>
+    
+            <p class="description" [innerHTML] = "details.description"></p>
+        </div>
+    
+        <div class="rightSide">
+
+            <div class="big-t">
+                D'autres actualités
+            </div>
+
+            <div class="newItem" *ngFor = "let new of others">
+                
+                    <div class="pic"
+                    
+                    [style.background-image]=" 'url(' + baseUrl + new.image + ')' "
+                    >
+                        <a [routerLink] = " 'news/' + new.id ">
+                            <div class="vid">
+                                <i class="far fa-play-circle" *ngIf = "new.type === '0'"></i>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <div class="info">
+                        <a [routerLink] = " 'news/' + new.id ">
+                            <div class="title">
+                                {{new.title}}
+                            </div>
+    
+                            <div class="description" [innerHTML] = "new.description">
+                                
+                            </div>
+                        </a>
+                    </div>
+                
+            </div>
+
+            <div class="newItem" *ngFor = "let new of others">
+                
+                <div class="pic"
+                
+                [style.background-image]=" 'url(' + baseUrl + new.image + ')' "
+                >
+                    <a [routerLink] = " 'news/' + new.id ">
+                        <div class="vid">
+                            <i class="far fa-play-circle" *ngIf = "new.type === '0'"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="info">
+                    <a [routerLink] = " 'news/' + new.id ">
+                        <div class="title">
+                            {{new.title}}
+                        </div>
+
+                        <div class="description" [innerHTML] = "new.description">
+                            
+                        </div>
+                    </a>
+                </div>
+            
+            </div>
+
+            <div class="newItem" *ngFor = "let new of others">
+                
+                <div class="pic"
+                
+                [style.background-image]=" 'url(' + baseUrl + new.image + ')' "
+                >
+                    <a [routerLink] = " 'news/' + new.id ">
+                        <div class="vid">
+                            <i class="far fa-play-circle" *ngIf = "new.type === '0'"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="info">
+                    <a [routerLink] = " 'news/' + new.id ">
+                        <div class="title">
+                            {{new.title}}
+                        </div>
+
+                        <div class="description" [innerHTML] = "new.description">
+                            
+                        </div>
+                    </a>
+                </div>
+            
+            </div>
+    
+    
+            
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>

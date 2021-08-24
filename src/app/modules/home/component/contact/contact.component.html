@@ -1,0 +1,104 @@
+<!-- Contact section-->
+<section id="contact" style="margin-top: 30px;">
+    <div class="cSide">
+        <div class="title">
+            Navigation
+        </div>
+
+        <div class="navItem">
+            <a href="#topBar">Accueil</a>
+        </div>
+
+        <div class="navItem">
+            <a href="#about">A la une</a>
+        </div>
+
+        <div class="navItem">
+            <a href="#services">Mon Ambassade</a>
+        </div>
+
+        <div class="navItem">
+            <a href="#contact">Contacts</a>
+        </div>
+    </div>
+
+    <div class="cSide">
+        <div class="title">
+            Nos coordonnées
+        </div>
+
+        <address>10 Avenue Dr Crozet 1er étage</address>
+
+        <div>Cel: 00225 00000000</div>
+        <div>Cel: 00225 00000000</div>
+        <div>Tel: 00225 00000000</div>
+        <div>E-mail: infos@embassynews.com</div>
+    </div>
+
+    <div class="cSide">
+        <div class="title">
+            Nous contacter
+        </div>
+
+        <form action="">
+
+            <div class="list">
+                <div class="input">
+                    <mat-form-field class="fullwidth" appearance="fill">
+                        <mat-label>Nom </mat-label>
+                        <input [formControl]="lastname" matInput>
+                        <mat-error>Champs requis</mat-error>
+                    </mat-form-field>
+                </div>
+    
+                <div class="input">
+                    <mat-form-field class="fullwidth" appearance="fill">
+                        <mat-label>Prénoms</mat-label>
+                        <input [formControl]="firstname" matInput>
+                        <mat-error>Champs requis</mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+    
+            <div class="list">
+                <div class="input">
+                    <mat-form-field class="fullwidth" appearance="fill">
+                        <mat-label>Objet</mat-label>
+                        <input [formControl]="subject"  matInput>
+                        <mat-error>Champs requis</mat-error>
+                    </mat-form-field>
+                </div>
+    
+                <div class="input">
+                    <mat-form-field class="fullwidth" appearance="fill">
+                        <mat-label>E-mail</mat-label>
+                        <input [formControl]="email" matInput>
+                        <mat-error>Champs requis</mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+    
+            <div class="list">
+                <div class="input">
+                    <mat-form-field class="fullwidth" appearance="fill">
+                        <mat-label>Message</mat-label>
+                        <textarea [formControl]="message" matInput cols="30" rows="5"></textarea>
+                        <mat-error>Champs requis</mat-error>
+                    </mat-form-field>
+                </div>
+    
+                
+            </div>
+    
+            <div class="button">
+                <div class="input">
+                    
+                </div>
+    
+                <div class="">
+                    <button mat-flat-button color = "primary" type="button" (click) = "sendMessage()">Envoyer</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

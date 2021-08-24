@@ -1,0 +1,105 @@
+.askVisa {
+    padding: 25px;
+    width: 100%;
+    background-color: #00a9ec;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 200px;
+        margin-right: 70px;
+        .icon {
+            font-size: 115px;
+            font-weight: bold;
+        }
+
+        .text {
+            margin-left: 10px;
+            text-transform: uppercase;
+            font-size: 50px;
+            line-height: 50px;
+            
+            font-weight: 100;
+        }
+    }
+
+    form {
+        margin-left: 70px;
+        width: 50%;
+        .list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .input {
+                width: 300px;
+            }
+        }
+
+        button {
+            font-weight: bold;
+        }
+    }
+}
+
+@media all and  (max-width: 768px) {
+    .askVisa {
+        padding: 15px;
+        width: 100%;
+        background-color: #00a9ec;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+    
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            width: 100%;
+            margin-right: 0 !important;
+            .icon {
+                font-size: 55px;
+                font-weight: bold;
+            }
+    
+            .text {
+                margin-left: 10px;
+                text-transform: uppercase;
+                font-size: 30px;
+                line-height: 50px;
+                
+                font-weight: 100;
+            }
+        }
+    
+        form {
+            width: 100%;
+            margin-left: 0 !important;
+            .list {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+    
+                .input {
+                    width: 100%;
+                }
+            }
+    
+            button {
+                font-weight: bold;
+            }
+        }
+    }
+}
